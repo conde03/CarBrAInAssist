@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="pagPrincip.css">
+    <link rel="stylesheet" href="App.css">
+    <link rel="stylesheet" href="todos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .rectangulo {
+            width: 90%; /* Ancho ocupando el 100% menos los márgenes */
+            height: 90%;
+            margin: 50px auto; /* Margen superior e inferior y centrado horizontalmente */
+            padding: 20px; /* Espacio interno */
+            background-color: #dddada; /* Color de fondo */
+            border: 2px solid #000; /* Borde sólido */
+            border-radius: 20px; /* Bordes redondeados */
+            font-size: 25px; /* Tamaño del texto */
+        }
+    </style>
+</head>
+<main>
+    <header class='cabecera'>
+        <div class='infocar'>
+            <a href="paginaPrincial.html" id="inicio">
+                <img src="./imagenes/casaNuevo.png" alt="Logo" class="tamanio-logos">
+                
+            </a>
+            <span class="conf" id="hora">
+                <script >
+                    // JavaScript para mostrar la hora actual
+                    function mostrarHora() {
+                        const horaElemento = document.getElementById('hora');
+                        const tiempoActual = new Date().toLocaleTimeString();
+                        horaElemento.textContent = tiempoActual;
+                    }
+            
+                    // Mostrar la hora actual al cargar la página y cada segundo
+                    mostrarHora();
+                    setInterval(mostrarHora, 1000);
+                </script>
+                
+            </span>
+            <span class="weather conf"></span>
+            
+            <div class="conf">
+                <img class="uil uil-volume-mute" src="./imagenes/svg/mute.svg" id="icon">
+                <input type="range" min="0" max="100" value="0" >
+                <span class="slide-value">0</span>
+            </div>
+            
+            <a href="preguntas.html" id="inicio">
+                <img src="./imagenes/interrogacion.png" alt="Logo" class="tamanio-logos">
+            </a>
+
+        </div>
+        
+        <div class="margenLogo">
+            <img src="./imagenes/logo.PNG" alt="Logo" id="ImagenLogo">
+        </div>
+
+        <div class='controlesDelCoche'>
+            <a class="boton" href="profile.html" >Usuario</a>
+            <a class="boton" href="musica.html" >Música</a>
+            <a class="boton" href="navegacion.html">Mapas</a>
+        </div> 
+
+        <script src="volume.js"></script>
+        <script src="weather.js"></script>
+    </header>
+    <body>
+        
+            <div class="rectangulo">
+                <p>Para más información --&gt; Multimedia/bluetooth/APP Documentos --&gt;</p>
+                <p><strong>Boton de volumen:</strong> La barra que se tiene en la barra principal permite subir y bajar el volumen de coche, estando a la derecha estará al 100% de volumen que permiten los altavoces y a la derecha, estará quitado el volumen, con un 0%.</p>
+                <p><strong>Boton Micrófono:</strong> El boton central de la pantalla principal permite hablar con la aplicación, este es el más importante y lo que da el caracter innovador a la aplicación, lo único que tiene que hacer es pulsar y hablarle, el asistente irá aprendiendo su voz y lo que le gusta y hace a lo largo del uso del coche.</p>
+                <p><strong>Botón Confortabilidad:</strong> Al ser una aplicación para coches universales, se tienen añadidos por defecto en los cuatro habitaculos del coche aire, en el momento que quiera quitarlos solo tiene que acceder a configuración.</p>
+            </div>
+        
+    </body>
+</main>
+
+</html>

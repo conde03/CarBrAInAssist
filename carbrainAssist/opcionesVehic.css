@@ -1,0 +1,125 @@
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    
+}
+
+
+.opcionesVehiculoBody{
+    background-color: #f0f0f0;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+.options-container {
+    max-height: 600px; /* Altura máxima para mostrar en la página */
+     
+    display: block;
+    
+}
+
+#opt-cont1{
+    overflow-y: auto; /* Añadir una barra de desplazamiento vertical si es necesario */
+}
+
+
+.option {
+    background-color: #f0f0f0;
+    padding: 12px;
+    margin: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+}
+
+.option:hover {
+    background-color: #ccc;
+}
+
+
+.menu1{
+    position: relative; /* Asegúrate de que el menú tenga una posición relativa */
+    z-index: 998; /* Para que la cabecera esté sobre el resto del contenido */
+    align-items: center;
+    margin-right: 25vw;
+    margin-left: 25vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #333;
+}
+
+
+.menu1 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu1 li {
+    margin-right: 10px;
+    width: 50vw;
+    text-align: center;
+}
+
+.menu1 li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.menu1 li a:hover {
+    background-color: white;
+    color: #333;
+}
+
+
+.a{
+    align-items: center;
+}
+
+
+.option-elem{
+    display: none;
+    margin: 15px;
+    font-weight: normal;
+    border-radius: 5px; 
+    background-color: #f0f0f0;
+    padding: 10px;
+    width: 100%;
+
+
+}
+
+.option-elem:hover{
+    color: #b8b3b3;
+}
+/* Mostrar el contenido cuando se haga clic en el botón si nos damos cuenta show se usa en el script*/
+.option-elem.show{
+    display:block;
+}
+
+.rotate-icon{
+    vertical-align: auto;
+    right: 10%;
+    position: absolute;
+    transform: rotate(90deg);
+    display: inline-block;
+    cursor: pointer;
+    top: 50%;
+}
+
+
+.alineamiento{
+    display: block;
+    width: 75%;
+}
+

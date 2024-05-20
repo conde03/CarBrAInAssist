@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="multimed.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="App.css">
+    
+    <link rel="stylesheet" href="scroll-bar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <title>Document</title>
+    <style>
+        
+    
+        .container {
+            margin: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80%;
+            width: 90%;
+            
+        
+        }
+    
+        .profile-card {
+            display: flex;
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: #d1d1d1;
+        }
+    
+        .profile-image {
+            flex: 1;
+            
+        }
+    
+        .profile-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    
+        .profile-info {
+            flex: 2;
+            
+            padding: 20px;
+        }
+    
+        .profile-info h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <header class='cabecera'>
+        <div class='infocar'>
+            <a href="paginaPrincial.html" id="inicio">
+                <img src="./imagenes/casaNuevo.png" alt="Logo" class="tamanio-logos">
+                
+            </a>
+            <span class="conf" id="hora">
+                <script >
+                    // JavaScript para mostrar la hora actual
+                    function mostrarHora() {
+                        const horaElemento = document.getElementById('hora');
+                        const tiempoActual = new Date().toLocaleTimeString();
+                        horaElemento.textContent = tiempoActual;
+                    }
+            
+                    // Mostrar la hora actual al cargar la página y cada segundo
+                    mostrarHora();
+                    setInterval(mostrarHora, 1000);
+                </script>
+                
+            </span>
+            <span class="weather conf"></span>
+            
+            <div class="conf">
+                <img class="uil uil-volume-mute" src="./imagenes/svg/mute.svg" id="icon">
+                <input type="range" min="0" max="100" value="0" >
+                <span class="slide-value">0</span>
+            </div>
+                
+        </div>
+        
+        <div class="margenLogo">
+            <img src="./imagenes/logo.PNG" alt="Logo" id="ImagenLogo">
+        </div>
+
+        <div class='controlesDelCoche'>
+            <a class="boton" href="musica.html" >Música</a>
+            <a class="boton" href="navegacion.html">Mapas</a>
+        </div> 
+
+        <script src="volume.js"></script>
+        <script src="weather.js"></script>
+    </header>
+    
+
+    <div class="container">
+        <div class="profile-card">
+            <div class="profile-image">
+                <img src="imagenes/imagenPersona.jpg" alt="Perfil">
+            </div>
+            <div class="profile-info">
+                <h2>Datos del Conductor</h2>
+                <p>Nombre: Juan Pérez</p>
+                <p>Edad: 30 años</p>
+                <p>Correo electrónico: juan@example.com</p>
+                <p>Número de teléfono: 123-456-789</p>
+                <!-- Agrega más información aquí -->
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

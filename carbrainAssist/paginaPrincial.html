@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="pagPrincip.css">
+    <link rel="stylesheet" href="App.css">
+    <link rel="stylesheet" href="todos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+    <title>Document</title>
+</head>
+<main>
+    <header class='cabecera'>
+        <div class='infocar'>
+            <span class="conf" id="hora">
+                <script >
+                    // JavaScript para mostrar la hora actual
+                    function mostrarHora() {
+                        const horaElemento = document.getElementById('hora');
+                        const tiempoActual = new Date().toLocaleTimeString();
+                        horaElemento.textContent = tiempoActual;
+                    }
+            
+                    // Mostrar la hora actual al cargar la página y cada segundo
+                    mostrarHora();
+                    setInterval(mostrarHora, 1000);
+                </script>
+                
+            </span>
+            <span class="weather conf"></span>
+            
+            <div class="conf">
+                <img class="uil uil-volume-mute" src="./imagenes/svg/mute.svg" id="icon">
+                <input type="range" min="0" max="100" value="0" >
+                <span class="slide-value">0</span>
+            </div>
+            
+            <a href="preguntas.html" id="inicio">
+                <img src="./imagenes/interrogacion.png" alt="Logo" class="tamanio-logos">
+            </a>
+
+        </div>
+        
+        <div class="margenLogo">
+            <img src="./imagenes/logo.PNG" alt="Logo" id="ImagenLogo">
+        </div>
+
+        <div class='controlesDelCoche'>
+            <a class="boton" href="profile.html" >Usuario</a>
+            <a class="boton" href="musica.html" >Música</a>
+            <a class="boton" href="navegacion.html">Mapas</a>
+        </div> 
+
+        <script src="volume.js"></script>
+        <script src="weather.js"></script>
+    </header>
+
+    <body>
+        <div class="App-main">
+            <a href="habitabilidad.html" class="rectangulo" id="rectangulo1">
+                <img src="./imagenes/comodidad.png" alt="Habitabilidad" id="imagenHabitabilidad">
+                <span id="textoConfort">Confort</span>
+            </a>
+                
+            <a href="multimedia.html" class="rectangulo" id="rectangulo2">
+                <img src="./imagenes/multimedia.png" alt="Multimedia" id="imagenMultimedia">
+                <span id="textMultimedia">Multimedia</span>
+            </a>
+                
+            <a href="opcionesVehiculo.html" class="rectangulo" id="rectangulo3">
+                <img src="./imagenes/imgenAjustes.png" alt="Opciones Del Vehiculo" id="imagenOpcionesVehiculo">
+                <span id="textoConf">Ajustes</span>
+            </a>
+                
+            <a href="navegacion.html" class="rectangulo" id="rectangulo4">
+                <img src="./imagenes/mapas1.png" alt="Navegacion" id="imagenNavegacion">
+                <span id="textoNavegacion">Navegación</span>
+            </a>
+
+            <a href="#" class="circulo" id="circulo1">
+                <img src="./imagenes/mic.png" alt="Microfono" id="imagenMicrofono">
+                
+            </a>
+                
+            <a href="#" class="circulo" id="circulo2">
+                
+            </a>
+        </div>
+
+        <script>
+            const alerta = document.getElementById('imagenMicrofono');
+
+            alerta.addEventListener('click', () => {
+                alert('Está en Proceso');
+            });
+
+
+
+
+        </script>
+        
+    </body>
+</main>
+
+
+</html>

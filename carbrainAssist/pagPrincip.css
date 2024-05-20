@@ -1,0 +1,203 @@
+.rectangulo {
+  padding: 20px;
+  margin: 10px;
+  
+  box-sizing: border-box;
+  width: 45vw; /* El 25% del ancho de la ventana */
+  height: calc(50vh - 70px); /* El 10% del alto de la ventana */
+  z-index: 1;
+  position: relative;
+  
+  background-color: #c9c9c9; /* Gris claro */
+  /* Opcional: agregar una sombra */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  
+}
+
+#rectangulo1 {
+  float: left;
+  margin-left: 4vw; /* 5% del ancho de la ventana */
+  border-radius: 10px;
+  margin: 20px auto;
+  /* Opcional: agregar un borde */
+  border: 2px solid #000000;
+  /* Opcional: agregar una sombra */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+#imagenHabitabilidad{
+  position: absolute;
+  width: auto;
+  height: 18vw;
+  left: 20%;
+  bottom: 5%;
+}
+#textoConfort{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 10px;
+  color: black;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+
+#rectangulo2 {
+  float: right;
+  margin-left: 4vw; /* 5% del ancho de la ventana */
+  border-radius: 10px;
+  margin: 20px auto;
+  /* Opcional: agregar un borde */
+  border: 2px solid #000000;
+  /* Opcional: agregar una sombra */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+#textMultimedia{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 10px;
+  color: black;
+  font-size: 40px;
+  font-weight: bold;
+}
+#imagenMultimedia{
+  position: absolute;
+  width: auto;
+  height: 15vw;
+  right: 9vw;
+  z-index: 5;
+}
+
+
+
+#rectangulo3 {
+  margin-left: 4vw; /* 5% del ancho de la ventana */
+  border-radius: 10px;
+  margin: 20px auto;
+  /* Opcional: agregar un borde */
+  border: 2px solid #000000;
+  /* Opcional: agregar una sombra */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: inline-block;
+
+}
+#imagenOpcionesVehiculo{
+  position: absolute;
+  width: auto;
+  height: 17vw;
+  left: 1.5w;
+  z-index: 5;
+}
+#textoConf {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 10px;
+  color: black;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+
+
+#rectangulo4 {
+  margin-left: 20vw; /* 5% del ancho de la ventana */
+  border-radius: 10px;
+  margin: 20px auto;
+  margin-bottom: auto;
+
+  position: relative;
+  display: inline-block;
+  /* Opcional: agregar un borde */
+  border: 2px solid #000000;
+
+  /* Opcional: agregar una sombra */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+#imagenNavegacion {
+  position: absolute;
+  width: auto;
+  height: 18vw;
+  right: 8vw;
+}
+#textoNavegacion {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: black;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+
+
+
+  #circulo1 {
+    padding: 20px;
+    margin: 10px;
+    
+    box-sizing: border-box;
+    width: 25vw; /* El 25% del ancho de la ventana */
+    height: 25vw; /* El 10% del alto de la ventana */
+    border-radius: 50%;
+    background-color: #aa2929; /* Gris claro */
+    z-index: 3;
+    position: absolute;
+    top: 55%; /* El 50% del alto de la ventana */
+    left: 49.4%; /* El 50% del ancho de la ventana */
+    transform: translate(-50%, -50%); /* Centrar el elemento */
+  }
+
+  
+  #circulo2 {
+    padding: 20px;
+    margin: 10px;
+    
+    box-sizing: border-box;
+    width: 32vw; /* El 25% del ancho de la ventana */
+    height: 32vw; /* El 10% del alto de la ventana */
+    border-radius: 50%;
+    background-image: url('imagenes/vector-mar-2020-68.jpg');  background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen en el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+
+    
+    z-index: 2;
+    position: absolute;
+    top: 55%; /* El 50% del alto del div */
+    left: 49.4%; /* El 50% del ancho del div */
+    transform: translate(-50%, -50%); /* Centrar el elemento */
+  }
+
+ 
+
+  
+
+
+
+
+#imagenMicrofono{
+  position: absolute;
+  width: auto;
+  height: 20vw;
+  left: 2.5vw;
+  top: 2vw;
+  
+  z-index: 5;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
