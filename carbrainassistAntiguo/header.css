@@ -1,0 +1,97 @@
+
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #5a5a5a;
+    color: white;
+    padding: 10px;
+    position: relative; /* Para fijar la cabecera en la parte superior de la pantalla */
+    top: 0; /* Para fijar la cabecera en la parte superior de la pantalla */
+    left: 0; /* Para que la cabecera comience desde la izquierda */
+    width: 100%; /* Para que la cabecera ocupe todo el ancho de la pantalla */
+    z-index: 999; /* Para que la cabecera esté sobre el resto del contenido */
+    box-sizing: border-box; /* Para incluir el padding en el ancho total de la cabecera */
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 2px;
+}
+
+  #hora {
+    margin: 10px;
+}
+
+  .conf {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    padding: 5px 10px;
+  }
+
+  .infocar {
+    position: relative; /* Asegúrate de que el menú tenga una posición relativa */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    padding: 5px 10px;
+  }
+
+  .margenLogo{
+    position: fixed;
+    right: 47%;
+    
+  }
+
+  #ImagenLogo{
+    width: 6vw;
+    height: auto;
+    
+    text-align: center;
+    justify-content: center;
+
+    
+  }
+  
+  .controlesDelCoche {
+    display: flex;
+  }
+  
+  .boton, .boton-volumen {
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #666;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .boton:hover, .boton-volumen:hover {
+    background-color: #999;
+  }
+
+
+  .menu{
+    position: relative; /* Asegúrate de que el menú tenga una posición relativa */
+    z-index: 998; /* Para que la cabecera esté sobre el resto del contenido */
+    align-items: center;
+    margin-right: 30px;
+    margin-left: 30px;
+    padding: 10px;
+
+  }
+
+
+  #imagenCasa{
+    width: 23px;
+    height: 23px;
+    margin-right: 10px;
+    
+  }
+  

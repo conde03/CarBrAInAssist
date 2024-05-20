@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+
+
+
+  .App-header {
+    height: 70px; /* Altura deseada para la cabecera */
+    width: 100%; /* Ancho completo de la ventana */
+    background-color: #333;
+    color: white;
+    padding: 2px;
+    box-sizing: border-box; /* Incluir el padding en el ancho total */
+    font-family: 'Roboto', sans-serif;
+  
+  }
+
+
+  .menu{
+    position: relative; /* Asegúrate de que el menú tenga una posición relativa */
+    z-index: 998; /* Para que la cabecera esté sobre el resto del contenido */
+    align-items: center;
+    margin-right: 30px;
+    margin-left: 30px;
+    padding: 10px;
+
+  }
+
+
+
+
+  

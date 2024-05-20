@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="habitabilid.css">
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+        <link rel="stylesheet" href="todos.css">
+    </head>
+
+
+    <main>
+
+        <header>
+            <div class='cabecera'>
+                <div class='infocar'>
+                    <a href="paginaPrincial.html" id="inicio">
+                        <img src="./imagenes/casaNuevo.png" alt="Logo" id="imagenCasa">
+                        
+                    </a>
+                    <span class="conf" id="hora">
+                        <script >
+                            // JavaScript para mostrar la hora actual
+                            function mostrarHora() {
+                                const horaElemento = document.getElementById('hora');
+                                const tiempoActual = new Date().toLocaleTimeString();
+                                horaElemento.textContent = tiempoActual;
+                            }
+                    
+                            // Mostrar la hora actual al cargar la página y cada segundo
+                            mostrarHora();
+                            setInterval(mostrarHora, 1000);
+                        </script>
+                        
+                    </span>
+                    <span class="weather conf"></span>
+                    
+                    <div class="conf">
+                        <img class="uil uil-volume-mute" src="./imagenes/svg/mute.svg" id="icon">
+                        <input type="range" min="0" max="100" value="0" >
+                        <span class="slide-value">0</span>
+                    </div>
+        
+                    <a href="profile.html" class="conf">
+                        <span class="time">User</span>
+                    </a>
+                        
+                </div>
+                
+                <div class="margenLogo">
+                    <img src="./imagenes/logo.PNG" alt="Logo" id="ImagenLogo">
+                </div>
+        
+                <div class='controlesDelCoche'>
+                    <a class="boton" href="musica.html" >Música</a>
+                    <a class="boton" href="navegacion.html">Mapas</a>
+                </div> 
+            </div>
+            
+            <nav class="menu">
+                <ul class="diferencia">
+                    <li><a href="#">Clima habitaculo</a></li>
+                    <li><a href="#">Iluminacion</a></li>
+                </ul>
+            </nav>
+                
+            <script src="volume.js"></script>
+            <script src="weather.js"></script>
+        </header>
+
+
+
+
+        
+        <!-- Contenedor para mostrar la imagen del clima de los asientos -->
+    <body class="bodyOptions">
+        <div class="contenedorTemperaturas">
+            <div class="temperatura1" id="temperaturaDerecha1">20°C</div>
+            <div class="temperatura2" id="temperaturaIzquierda1">20°C</div>
+            <div class="temperatura3" id="temperaturaDerecha2">20°C</div>
+            <div class="temperatura4" id="temperaturaIzquierda2">20°C</div>
+    
+    
+            <div class="contenedorBotones1">
+                <button class="botonTemperatura1" onclick="incrementarTemperatura('derecha1')">+</button>
+                <button class="botonTemperatura2" onclick="decrementarTemperatura('derecha1')">-</button>
+            </div>
+            <div class="contenedorBotones2">
+                <button class="botonTemperatura1" onclick="incrementarTemperatura('izquierda1')">+</button>
+                <button class="botonTemperatura2" onclick="decrementarTemperatura('izquierda1')">-</button>
+            </div>
+            <div class="contenedorBotones3">
+                <button class="botonTemperatura1" onclick="incrementarTemperatura('derecha2')">+</button>
+                <button class="botonTemperatura2" onclick="decrementarTemperatura('derecha2')">-</button>
+            </div>
+            <div class="contenedorBotones4">
+                <button class="botonTemperatura1" onclick="incrementarTemperatura('izquierda2')">+</button>
+                <button class="botonTemperatura2" onclick="decrementarTemperatura('izquierda2')">-</button>
+            </div>
+                <!-- Contenedor para superponer la temperatura sobre la imagen -->
+                <img id="imagencoche" src="./imagenes/temp_asientos.png" alt="Clima Asientos">
+            
+        </div>
+        </body>
+    
+        <script>
+            function incrementarTemperatura(lado) {
+                var temperaturaElement;
+                if (lado === 'derecha1') {
+                    temperaturaElement = document.getElementById('temperaturaDerecha1');
+                } else if (lado === 'izquierda1') {
+                    temperaturaElement = document.getElementById('temperaturaIzquierda1');
+                }else if (lado === 'derecha2') {
+                    temperaturaElement = document.getElementById('temperaturaDerecha2');
+                }else if (lado === 'izquierda2') {
+                    temperaturaElement = document.getElementById('temperaturaIzquierda2');
+                }
+                
+                var temperatura = parseInt(temperaturaElement.innerText);
+                temperatura++;
+                temperaturaElement.innerText = temperatura + '°C';
+            }
+    
+            function decrementarTemperatura(lado) {
+                var temperaturaElement;
+                if (lado === 'derecha1') {
+                    temperaturaElement = document.getElementById('temperaturaDerecha1');
+                } else if (lado === 'izquierda1') {
+                    temperaturaElement = document.getElementById('temperaturaIzquierda1');
+                }else if (lado === 'derecha2') {
+                    temperaturaElement = document.getElementById('temperaturaDerecha2');
+                }else if (lado === 'izquierda2') {
+                    temperaturaElement = document.getElementById('temperaturaIzquierda2');
+                }
+                
+                var temperatura = parseInt(temperaturaElement.innerText);
+                temperatura--;
+                temperaturaElement.innerText = temperatura + '°C';
+            }
+        </script>
+
+
+    </main>
+
+</html>

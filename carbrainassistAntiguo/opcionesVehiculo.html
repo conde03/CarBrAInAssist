@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="opcionesVehic.css">
+    <link rel="stylesheet" href="header.css"> 
+    <link rel="stylesheet" href="App.css">
+    <link rel="stylesheet" href="habitabilid.css">
+    <link rel="stylesheet" href="todos.css">
+    <link rel="stylesheet" href="toogleBox.css">
+    <link rel="stylesheet" href="multimed.css">
+    <link rel="stylesheet" href="scroll-bar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+</head>
+
+<main>
+    <header>
+        <div class='cabecera'>
+            <div class='infocar'>
+                <a href="paginaPrincial.html" id="inicio">
+                    <img src="./imagenes/casaNuevo.png" alt="Logo" id="imagenCasa">
+                    
+                </a>
+                <span class="conf" id="hora">
+                    <script >
+                        // JavaScript para mostrar la hora actual
+                        function mostrarHora() {
+                            const horaElemento = document.getElementById('hora');
+                            const tiempoActual = new Date().toLocaleTimeString();
+                            horaElemento.textContent = tiempoActual;
+                        }
+                
+                        // Mostrar la hora actual al cargar la página y cada segundo
+                        mostrarHora();
+                        setInterval(mostrarHora, 1000);
+                    </script>
+                    
+                </span>
+                <span class="weather conf"></span>
+                
+                <div class="conf">
+                    <img class="uil uil-volume-mute" src="./imagenes/svg/mute.svg" id="icon">
+                    <input type="range" min="0" max="100" value="0" >
+                    <span class="slide-value">0</span>
+                </div>
+    
+                <a href="profile.html" class="conf">
+                    <span class="time">User</span>
+                </a>
+                    
+            </div>
+            
+            <div class="margenLogo">
+                <img src="./imagenes/logo.PNG" alt="Logo" id="ImagenLogo">
+            </div>
+    
+            <div class='controlesDelCoche'>
+                <a class="boton" href="musica.html" >Música</a>
+                <a class="boton" href="navegacion.html">Mapas</a>
+            </div> 
+        </div>
+        
+        <nav class="menu1">
+            <ul class="diferencia">
+                <li><a href="#" id="carBrainAssist">CarBrAInAssist</a></li>
+                <li><a href="#" id="ajustesMultimedia">Configuración multimedia</a></li>
+                <li><a href="#" id="ajustesHabitabilidad">Configuración habitabilidad</a></li>
+            </ul>
+        </nav>
+        <script src="volume.js"></script>
+        <script src="weather.js"></script>
+    </header>
+
+    <body class="opcionesVehiculoBody">
+    
+   
+
+
+        <!-- Agrega el contenedor de opciones aquí -->
+        <div class="container">
+            <div class="options-container"></div>
+        </div>
+    
+        <script>
+    
+            document.addEventListener("DOMContentLoaded", function() {
+                
+               
+    
+    
+                // Función para mostrar lo primero de todo
+                const opcionesContainer = document.querySelector(".options-container");
+                    opcionesContainer.innerHTML = `
+                    <div class="container " >
+                        <h1>Opciones CarBrAInAssist </h1>
+                        <div class="options-container scrolling-container linea" id="opt-cont1">
+                            
+                            <div class="option">  
+                                <div class="Toogle-switch-Container">
+                                    <div class="margen">Microfono</div>
+                                    <div> 
+                                        <label class="switch">
+                                            <input type="checkbox" class="input">
+                                            <div class="rail">
+                                                <span class="circle"></span>
+                                            </div>
+                                            <span class="indicator"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                           </div>
+                            <div class="option">
+                                <div class="Toogle-switch-Container">
+                                    <div class="margen">Activar/Descativar Inteligencia Artificial</div>
+                                    <div> 
+                                        <label class="switch">
+                                            <input type="checkbox" class="input">
+                                            <div class="rail">
+                                                <span class="circle"></span>
+                                            </div>
+                                            <span class="indicator"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="option">
+                                <div class="Toogle-switch-Container">
+                                    <div class="margen">Opciones de Conducción Autónoma</div>
+                                    <div> 
+                                        <label class="switch">
+                                            <input type="checkbox" class="input">
+                                            <div class="rail">
+                                                <span class="circle"></span>
+                                            </div>
+                                            <span class="indicator"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="option">
+                                <div class="Toogle-switch-Container">
+                                    <div class="margen">Asistente de Cambio de Carril</div>
+                                    <div> 
+                                        <label class="switch">
+                                            <input type="checkbox" class="input">
+                                            <div class="rail">
+                                                <span class="circle"></span>
+                                            </div>
+                                            <span class="indicator"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="option">
+                                <div class="Toogle-switch-Container">
+                                    <div class="margen">Asistente de Mantenimiento de Carril</div>
+                                    <div> 
+                                        <label class="switch">
+                                            <input type="checkbox" class="input">
+                                            <div class="rail">
+                                                <span class="circle"></span>
+                                            </div>
+                                            <span class="indicator"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="option"  onclick="toggleMenu(this, 'cambioColor')">
+                                <div class="alineamiento">
+                                    <div> Cambiar Color 
+                                        <div class="option-elem" data-option="cambioColor"> Cambiar Color exterior del Coche  </div>
+                                        <div class="option-elem" data-option="cambioColor"> Cambiar Color de Luces  </div>
+                                        <div class="option-elem" data-option="cambioColor"> Cambiar Color de Interiores  </div>
+                                        <div class="option-elem" data-option="cambioColor"> Cambiar Color de Llantas  </div>
+                                    </div>
+                                    
+                                    <div class="rotate-icon" > > </div>
+                                </div>
+                            </div>
+    
+    
+    
+                            <div class="option"  onclick="toggleMenu(this, 'asistentesActiva')">
+                                <div class="alineamiento">
+                                    <div> Activacion de Elementos De seguridad Activa
+    
+                                        <div class="option-elem"  data-option="asistentesActiva">Asistente de Frenado de Emergencia
+                                            
+                                        </div>
+                                        <div class="option-elem" data-option="asistentesActiva">Asistente de Estacionamiento
+                                            
+                                        </div>
+                                        <div class="option-elem" data-option="asistentesActiva">Asistente de Tráfico
+                                            
+                                        </div>
+                                        <div class="option-elem" data-option="asistentesActiva">Asistente de Fatiga
+                                            
+                                        </div>
+                                        <div class="option-elem" data-option="asistentesActiva">Asistente de Luces Altas
+                                            
+                                        </div>
+                                        <div class="option-elem" data-option="asistentesActiva">Asistente de Señales de Tráfico
+                                            
+                                        </div>
+                                        <div class="option-elem" data-option="asistentesActiva">Asistente de Punto Ciego
+                                            
+                                        </div>
+                                        <div class="option-elem" data-option="asistentesActiva">Asistente de Tráfico Cruzado
+                                            
+                                        </div>
+                                        <div class="option-elem" data-option="asistentesActiva">Asistente de Atascos
+    
+                                        </div>
+                                    
+                                    </div>
+                                    <div class="rotate-icon" > > </div>
+    
+                                </div>
+                            </div>
+                            
+    
+                            <div class="option"  onclick="toggleMenu(this,'trazados')">
+                                <div class="alineamiento">
+    
+                                    <div>Asistente de Conducción en diferentes trazados
+                                                                            
+                                        <div class="option-elem" data-option="trazados">Asistente de Conducción en Autopista
+                                            
+                                        </div>			
+                                        <div class="option-elem" data-option="trazados">Asistente de Conducción en Ciudad
+                                            
+                                        </div>
+                                        <div class="option-elem" data-option="trazados">Asistente de Conducción en Carretera
+                                            
+                                        </div>
+                                        <div class="option-elem" data-option="trazados">Asistente de Conducción en Montaña
+                                            
+                                        </div>
+                                        <div class="option-elem" data-option="trazados">Asistente de Conducción en Nieve
+                                            
+                                        </div>
+                                        <div class="option-elem" data-option="trazados">Asistente de Conducción en Lluvia
+                                            
+                                        </div>
+                                        <div class="option-elem" data-option="trazados">Asistente de Conducción en Desierto
+                                            
+                                        </div>
+                                            
+                                    </div>
+                                    <div class="rotate-icon" > > </div>
+                                </div>
+                            </div>
+                            
+    
+                            <div class="option"  onclick="toggleMenu(this, 'asistentes')">
+                                <div class="alineamiento">
+                                    <div>Asistentes en Conducción
+                                        <div class="option-elem"  data-option="asistentes"> Asistente de Estacionamiento
+    
+                                        </div>
+                                        <div class="option-elem"  data-option="asistentes">Control de Crucero Adaptativo
+                                            
+                                        </div>
+                                        <div class="option-elem"  data-option="asistentes">Sistema de Detección de Punto Ciego
+                                            
+                                        </div>
+                                        <div class="option-elem"  data-option="asistentes">Sistema de Frenado Automático
+                                            
+                                        </div>
+                                        <div class="option-elem"  data-option="asistentes">Sistema de Alerta de Colisión Frontal
+                                            
+                                        </div>
+                                        <div class="option-elem"  data-option="asistentes">Sistema de Alerta de Tráfico Cruzado
+                                            
+                                        </div>
+                                        <div class="option-elem"  data-option="asistentes">Sistema de Alerta de Salida de Carril
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="rotate-icon" > > </div>
+    
+                                </div>
+                            </div>
+    
+    
+                            
+                            
+                        </div>
+                    </div>`;
+                    
+                    opcionesContainer.style.display = "block"; // Mostrar el contenedor de opciones
+            
+                
+    
+                // Funciones que se montraran cuando se pulse el boton correspondiente
+                
+                
+    
+        
+        });
+    
+        </script>
+    
+        <script src="script.js" ></script>
+        
+        
+    </body>
+
+
+
+</main>
+
+
+</html>

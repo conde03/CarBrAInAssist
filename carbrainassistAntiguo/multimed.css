@@ -1,0 +1,52 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+
+
+.claseNav{
+    background-image: url('imagenes/vector-mar-2020-68.jpg');  background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.scrolling-container {
+    
+    height: 100%; /* Altura deseada del contenedor */
+    width: 100%; /* Ancho deseado del contenedor */
+    
+    overflow-x: scroll; /* Permitir desplazamiento horizontal */
+    
+}
+
+.scrolling-content {
+    display: flex; /* Mostrar los elementos en una línea */
+    gap: 20px; /* bohmentos */
+    height: 100%; /* Altura deseada del contenedor */
+    width: 100%; /* Ancho deseado del contenedor */
+   
+    
+    
+}
+
+.elemento {
+    flex-shrink: 0; /* Evitar que los elementos se contraigan */
+    width: 41vw; /* Ancho deseado para cada elemento */
+    height: 41vw; /* Altura deseada para cada elemento */
+    background-color: #ccc; /* Color de fondo temporal */
+    border-radius: 50%; /* Para que los elementos sean redondos */
+    display: flex; /* Para alinear el contenido */
+    justify-content: center; /* Para centrar horizontalmente */
+    align-items: center; /* Para centrar verticalmente */
+    overflow: hidden; /* Ocultar el exceso de contenido */
+}
+
+.elemento img {
+    width: 22vw; /* Tamaño deseado del icono */
+    height: 22vw; /* Tamaño deseado del icono */
+}
+
+
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="multimed.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="App.css">
+    
+    <link rel="stylesheet" href="scroll-bar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<main class="claseNav">
+    <header class='cabecera'>
+        <div class='infocar'>
+            <a href="paginaPrincial.html" id="inicio">
+                <img src="./imagenes/casaNuevo.png" alt="Logo" id="imagenCasa">
+                
+            </a>
+            <span class="conf" id="hora">
+                <script >
+                    // JavaScript para mostrar la hora actual
+                    function mostrarHora() {
+                        const horaElemento = document.getElementById('hora');
+                        const tiempoActual = new Date().toLocaleTimeString();
+                        horaElemento.textContent = tiempoActual;
+                    }
+            
+                    // Mostrar la hora actual al cargar la página y cada segundo
+                    mostrarHora();
+                    setInterval(mostrarHora, 1000);
+                </script>
+                
+            </span>
+            <span class="weather conf"></span>
+            
+            <div class="conf">
+                <img class="uil uil-volume-mute" src="./imagenes/svg/mute.svg" id="icon">
+                <input type="range" min="0" max="100" value="0" >
+                <span class="slide-value">0</span>
+            </div>
+
+            <a href="profile.html" class="conf">
+                <span class="time">User</span>
+            </a>
+                
+        </div>
+        
+        <div class="margenLogo">
+            <img src="./imagenes/logo.PNG" alt="Logo" id="ImagenLogo">
+        </div>
+
+        <div class='controlesDelCoche'>
+            <a class="boton" href="musica.html" >Música</a>
+            <a class="boton" href="navegacion.html">Mapas</a>
+        </div> 
+
+        <script src="volume.js"></script>
+        <script src="weather.js"></script>
+    </header>
+
+
+
+
+    <body class="body">
+        <div class="scrolling-container linea">
+            <div class="scrolling-content">
+                <div class="elemento"><img src="./imagenes/radio-png.webp" alt="Radio"></div>
+                <div class="elemento"><img src="./imagenes/bluet.png" alt="Bluetooth"></div>
+                <div class="elemento"><img src="./imagenes/usbflashdrive_102172.png" alt="USB"></div>
+                <div class="elemento"><img src="./imagenes/blank-cd-or-dvd-disc-png.webp" alt="CD"></div>
+                <a href="musica.html">
+                    <div class="elemento"><img src="./imagenes/1987997dada.png" alt="Musica"></div>
+                </a>
+               
+            </div>
+        </div>
+    
+        <script>
+            document.getElementById('rectangulo4').addEventListener('click', function() {
+                window.location.href = 'navegacion.html';
+            });
+        </script>
+    </body>
+</main>
+
+
+</html>
+

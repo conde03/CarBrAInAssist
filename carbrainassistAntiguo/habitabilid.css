@@ -1,0 +1,162 @@
+/* Estilos generales */
+
+main{
+    width: 100%;
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+}
+
+
+.bodyOptions{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-image: url('imagenes/vector-mar-2020-68.jpg');  background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+      background-position: center; /* Centra la imagen en el fondo */
+      background-repeat: no-repeat; /* Evita que la imagen se repita */
+  
+
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 2px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline; /* Hace que los ítems del menú estén en una línea horizontal */
+    margin-right: 20px; /* Espacio entre los ítems del menú */
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+#imagencoche{
+    width: 20%; /* Ancho flexible según el contenido */
+    height: 40%;
+    margin: 0 auto; /* Centra el div horizontalmente */
+    padding: 20px; /* Agrega espacio interno al div */
+    max-width: 50%; /* Limita el ancho máximo del div al 100% del contenedor */
+}
+
+.temperatura1 {
+    font-weight: bold;
+    font-size: 30px;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    background-color: #c9c9c9;
+    padding: 10px;
+    color: #aa2929; /* Set the number color to red */
+    
+}
+
+.temperatura2 {
+    font-weight: bold;
+    font-size: 30px;
+    position: absolute;
+    top: 40%;
+    right: 30%;
+    background-color: #c9c9c9;
+    padding: 10px;
+    color: #aa2929; /* Set the number color to red */
+}
+
+.temperatura3 {
+    font-weight: bold;
+    font-size: 30px;
+    position: absolute;
+    top: 65%;
+    left: 30%;
+    background-color: #c9c9c9;
+    padding: 10px;
+    color: #aa2929; /* Set the number color to red */
+}
+
+.temperatura4 {
+    font-weight: bold;
+    font-size: 30px;
+    position: absolute;
+    top: 65%;
+    right: 30%;
+    background-color: #c9c9c9;
+    padding: 10px;
+    color: #aa2929; /* Set the number color to red */
+}
+
+
+
+
+.contenedorBotones1 {
+    font-size: 30px;
+    position: absolute;
+    top: 55%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.contenedorBotones2 {
+    font-size: 30px;
+    position: absolute;
+    top: 55%;
+    right: 30%;
+    transform: translate(50%, -50%);
+}
+
+
+.contenedorBotones3 {
+    font-size: 30px;
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.contenedorBotones4 {
+    font-size: 30px;
+    position: absolute;
+    top: 80%;
+    right: 30%;
+    transform: translate(50%, -50%);
+}
+
+
+.botonTemperatura1 {
+    font-size: 50px;
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
+.botonTemperatura2 {
+    font-size: 50px;
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
+/* Add styles for the image */
+img {
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.contenedorTemperaturas{
+    width: 100%;
+    height: 100%;
+}
+

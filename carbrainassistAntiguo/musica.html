@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="header.css">
+   <link rel="stylesheet" href="musica.css">
+    <link rel="stylesheet" href="todos.css">
+    <link rel="stylesheet" href="scroll-bar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<main>
+
+    <header class='cabecera'>
+        <div class='infocar'>
+            <a href="paginaPrincial.html" id="inicio">
+                <img src="./imagenes/logoCasa.png" alt="Logo" id="imagenCasa">
+                
+            </a>
+            <span class="conf" id="hora">
+                <script >
+                    // JavaScript para mostrar la hora actual
+                    function mostrarHora() {
+                        const horaElemento = document.getElementById('hora');
+                        const tiempoActual = new Date().toLocaleTimeString();
+                        horaElemento.textContent = tiempoActual;
+                    }
+            
+                    // Mostrar la hora actual al cargar la página y cada segundo
+                    mostrarHora();
+                    setInterval(mostrarHora, 1000);
+                </script>
+                
+            </span>
+            <span class="weather conf"></span>
+            
+            <div class="conf">
+                <img class="uil uil-volume-mute" src="./imagenes/svg/mute.svg" id="icon">
+                <input type="range" min="0" max="100" value="0" >
+                <span class="slide-value">0</span>
+            </div>
+
+            <a href="profile.html" class="conf">
+                <span class="time">User</span>
+            </a>
+                
+        </div>
+        
+        <div class="margenLogo">
+            <img src="./imagenes/logo.PNG" alt="Logo" id="ImagenLogo">
+        </div>
+
+        <div class='controlesDelCoche'>
+            <a class="boton" href="musica.html" >Música</a>
+            <a class="boton" href="navegacion.html">Mapas</a>
+        
+        </div> 
+
+        <script src="volume.js"></script>
+        <script src="weather.js"></script>
+    </header>
+
+
+
+
+
+
+    <body>
+        
+        
+        <div id="listado-canciones">
+
+        </div>
+
+        <div class="reproductor">
+
+            <div class="reproductor__controles">
+                <button class="reproductor__boton" id="reproductor__boton--anterior">
+                    <img style="width: 65%;" src="imagenes/back.png" alt="backward">
+                    <i class="fas fa-backward"></i>
+                </button>
+                <button class="reproductor__boton" id="reproductor__boton--play">
+                    <img src="imagenes/svg/pause-round-button.svg" alt="play" id="iconMusicPlayStop">
+                    
+                </button>
+                <button class="reproductor__boton" id="reproductor__boton--siguiente">
+                    <img style="width: 100%;" src="imagenes/next.png" alt="forward">
+                    <i class="fas fa-forward"></i>
+                </button>
+            </div>
+            
+            <div id="nombreCancion"> 
+            </div>
+
+            <div class="reproductor__contenedor">
+                <div class="reproductor__tiempo">
+                    <span id="reproductor__tiempo--actual">0:00</span>
+                    
+                </div>
+                
+                <div class="reproductor__barra">
+                    <div id="reproductor__barra--progreso"></div>
+                </div>
+    
+                <div class="reproductor__tiempo">
+                    
+                    <span id="reproductor__tiempo--total">0:00</span>
+                </div>
+
+            </div>
+            
+            <audio id="reproductor__audio" src="audio/cancion1.mp3"></audio>
+
+
+        </div>
+
+        <script src="musica.js"></script>
+    </body>
+
+
+
+
+</main>
+
+</html>
+
+
+
+
+
+<!-- Compare this snippet from navegacion.html: 
+     Aqui se suben los archivos a la carpeta 
+    <input type="file" id="fileInput" accept="audio/*" multiple />
+    <div id="listNombres"></div>
+
+    <div id="playlist">Musica subida</div>
+    <audio id="audioPlayer" controls></audio>
+
+    <script src="musica.js"></script>
+
+-->
